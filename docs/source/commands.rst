@@ -572,6 +572,22 @@ Commands
     
     
 
+``rln ssh.put``
+-----------
+
+.. code:: bash
+
+    Usage: rln [--core-opts] ssh.put [--options] [other tasks here ...]
+    
+    Docstring:
+      none
+    
+    Options:
+      -l STRING, --local=STRING
+      -r STRING, --remote=STRING
+    
+    
+
 ``rln lnd.install-go``
 -----------
 
@@ -1009,7 +1025,8 @@ Commands
     Usage: rln [--core-opts] system.ufw [other tasks here ...]
     
     Docstring:
-      Block all ports, apart from OpenSSH, 10009 (standard GRPC) and 9735 (standard P2P).
+      Block all ports, apart from OpenSSH, 10009 (standard GRPC) and 9735 (standard P2P) and
+      9911 (watchtower).
     
     Options:
       none
@@ -1089,6 +1106,21 @@ Commands
     Docstring:
       Run the suez app from src/suez
       to find out more: https://github.com/prusnak/suez
+    
+    Options:
+      none
+    
+    
+
+``rln utils.stream-htlcs``
+-----------
+
+.. code:: bash
+
+    Usage: rln [--core-opts] utils.stream-htlcs [other tasks here ...]
+    
+    Docstring:
+      none
     
     Options:
       none

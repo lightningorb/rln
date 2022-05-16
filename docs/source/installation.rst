@@ -3,7 +3,7 @@ Installation
 
 .. code-block:: bash
     
-    git clone https://github.com/getlightning/rln.git
+    git clone https://github.com/bc31164b-cfd5-4a63-8144-875100622b2d/rln.git
     cd rln
 
     # run from git dir
