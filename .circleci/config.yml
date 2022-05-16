@@ -1,0 +1,61 @@
+version: 2
+jobs:
+  build:
+    branches:
+      ignore:
+        - sphinx
+    docker:
+      - image: circleci/python:3.6.2-stretch-browsers
+    steps:
+      - checkout
+      # - run:
+      #     name: Install Python deps and build
+      #     command: |
+      #       pip3 install --upgrade pip --user
+      #       python3 setup.py build sdist
+      #       pip3 install . --user
+      # - run:
+      #     name: Save AWS Auth API Keys
+      #     command: |
+      #       ./rln aws.save-credentials --key-id=$aws_key --access-key=$aws_access_key --region=us-east-1
+      # - run:
+      #     name: Create AWS EC2 key-pair
+      #     command: |
+      #       ./rln aws.create-keypair --name=circleci
+      # - run:
+      #     name: Create AWS EC2 Lightning Node
+      #     command: |
+      #       ./rln create-aws-node --instance-type=c3.2xlarge --availability-zone=us-east-1a --name=circleci --disk-size=10 --mainnet --keypair-name circleci
+      # - run:
+      #     name: Test lncli command
+      #     command: |
+      #       ./rln -- lncli --help
+      # - run:
+      #     name: Test bitcion-cli command
+      #     command: |
+      #       ./rln -- bitcoin-cli --help
+      # - run:
+      #     name: Detach Disk
+      #     when: always
+      #     command: |
+      #       ./rln aws.detach-blockchain-disk --disk-name=circleci
+      # - run:
+      #     name: Delete Disk
+      #     when: always
+      #     command: |
+      #       ./rln aws.delete-blockchain-disk --disk-name=circleci
+      # - run:
+      #     name: Kill Instance
+      #     when: always
+      #     command: |
+      #       ./rln aws.kill --node-name=circleci --force
+      # - run:
+      #     name: Cleanup Key Pair
+      #     when: always
+      #     command: |
+      #       ./rln aws.delete-keypair --name=circleci
+      # - run:
+      #     name: Clean up prefs
+      #     when: always
+      #     command: |
+      #       ./rln prefs.remove --name circleci
