@@ -1,4 +1,5 @@
-# GetLightning
+# RLN
 
-Simply and easily deploy and run lightning.
+
+DOCS: https://rln.readthedocs.io/
 
